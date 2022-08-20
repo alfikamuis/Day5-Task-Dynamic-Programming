@@ -1,2 +1,27 @@
 # Day5-Task-Dynamic-Programming
- tugasl All day 5
+
+directory list
+BruteForceGreedyDandC
+|----SimpleEquations.java
+|----
+|----
+|----
+
+DinamicProgramming
+|----
+|----
+|----
+|----
+
+RecursiveNumberTheory
+|----FibbonaciRecursive.java
+|----PrimeXWhitoutRecursive.java 
+
+SearchingAndSorting
+|----MaximumBuyProduct.java
+|----MinMaxNumber.java
+|----MostAppearItem.java (optional)
+
+TimeComplexity
+|----FastExponential.java
+|----PrimeNumberOptimized.java 
