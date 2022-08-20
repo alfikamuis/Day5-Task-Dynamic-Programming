@@ -2,7 +2,7 @@
 
 directory list
 BruteForceGreedyDandC
-|----SimpleEquations.java
+|---- SimpleEquations.java
 |----
 |----
 |----
@@ -14,14 +14,14 @@ DinamicProgramming
 |----
 
 RecursiveNumberTheory
-|----FibbonaciRecursive.java
-|----PrimeXWhitoutRecursive.java 
+|---- FibbonaciRecursive.java
+|---- PrimeXWhitoutRecursive.java 
 
 SearchingAndSorting
-|----MaximumBuyProduct.java
-|----MinMaxNumber.java
-|----MostAppearItem.java (optional)
+|---- MaximumBuyProduct.java
+|---- MinMaxNumber.java
+|---- MostAppearItem.java (optional)
 
 TimeComplexity
-|----FastExponential.java
-|----PrimeNumberOptimized.java 
+|---- FastExponential.java
+|---- PrimeNumberOptimized.java 
