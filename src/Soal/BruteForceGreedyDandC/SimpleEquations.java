@@ -15,10 +15,10 @@ public class SimpleEquations {
         System.out.print("C: ");
         int C = scan.nextInt();
 
+        int x = 0,y = 0,z = 0;
         for (int index = 1; index < A; index++) {
             if (
-                    index+(index+1)+(index+2) == A &&
-                            index*(index+1)*(index+2) == A &&
+                    index+(index+1)+(index+2) == A
             ){
 
             }
