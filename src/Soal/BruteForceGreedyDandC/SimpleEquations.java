@@ -3,45 +3,66 @@ package Soal.BruteForceGreedyDandC;
 import java.util.Scanner;
 
 public class SimpleEquations {
+    static int A,B,C;
     public static void main(String[] args) {
-
         //input
         Scanner scan = new Scanner(System.in);
+        System.out.println("A == x+y+z\nB == x*y*z\nC == (x*x)+(y*y)+(z*z)");
         System.out.println("Input 3 number");
         System.out.print("A: ");
-        int A = scan.nextInt();
+        A = scan.nextInt();
         System.out.print("B: ");
-        int B = scan.nextInt();
+        B = scan.nextInt();
         System.out.print("C: ");
-        int C = scan.nextInt();
+        C = scan.nextInt();
 
-        int x = 0,y = 0,z = 0;
-        for (int index = 1; index < A; index++) {
-            if (
-                    index+(index+1)+(index+2) == A
-            ){
-
-            }
-
-        }
-
-        A = x+y+z;
-        B = x*y*z;
-        C = (x*x)+(y*y)+(z*z);
-
+        int x,y,z;
         if (
                 A >= 1 && A <= 10000 &&
                 B >= 1 && B <= 10000 &&
                 C >= 1 && C <= 10000
         ) {
-            System.out.println("1, 2, 3");
+
+            for (int temp = 1; temp <=20 ; temp++) {
+                if(B% temp == 0){
+                    for (int secondTemp = 1; secondTemp <=20 ; secondTemp++) {
+                        if(B% secondTemp == 0){
+                            if(A > B && A> C){
+                                System.out.println("solution not found!");
+                                temp = 20;
+                                break;
+                            }
+                            int tirdTemp = A - (temp+secondTemp);
+                            if(tirdTemp <= 0){
+                                temp+= 1;
+                                break;
+                            }
+                            if(B%tirdTemp == 0){
+                                System.out.printf("%d %d %d\n",temp,secondTemp,tirdTemp);
+                                if (check(temp,secondTemp,tirdTemp)){
+                                    temp = 20;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         } else {
-            System.out.println("no solution!");
+            System.out.println("out of reach");
         }
-        System.out.printf("\n%d %d %d",A,B,C);
     }
 
-    public static void add(){
+    public static boolean check(int x,int y,int z){
+        if(
+            A == x+y+z &&
+            B == x*y*z &&
+            C == (x*x)+(y*y)+(z*z)
+        ){
+            System.out.printf("x:%d y:%d z:%d",x,y,z);
+            return true;
+        }
 
+        return false;
     }
 }
