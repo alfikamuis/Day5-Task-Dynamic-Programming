@@ -1,13 +1,19 @@
-# directory list
+# directory list src/Soal
 
 | BruteForceGreedyDandC
 |-
-|1. SimpleEquations.java 
+|1. BinarySearchAlgoritm.java
+|2. DragonOfLoowater.java
+|3. MoneyChange.java
+|4. SimpleEquations.java 
 
 
 | DinamicProgramming
 |- 
-|- 
+|1. FibonacciBottomUp.java
+|2. FibonacciTopDown.java
+|3. Frog.java
+|4. RomanNumeral.java 
 
 
 | RecursiveNumberTheory
