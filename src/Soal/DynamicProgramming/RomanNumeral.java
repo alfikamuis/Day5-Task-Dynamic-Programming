@@ -3,7 +3,6 @@ package Soal.DynamicProgramming;
 import java.util.Scanner;
 
 public class RomanNumeral {
-    static String roman = "";
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("konversi angka ke romawi\n========================");
@@ -15,44 +14,45 @@ public class RomanNumeral {
     }
 
     public static String romanConversion(int input) {
-        if (input == 0) return roman;
+        if (input == 0) return "";
 
         if (input-1000 >= 0) {
             input -= 1000;
-            roman += "M";
+            return "M"+ romanConversion(input);
         }
         else if (input-500 >=0) {
             input -= 500;
-            roman += "D";
+            return "D"+ romanConversion(input);
         }
         else if (input-100 >=0) {
             input -= 100;
-            roman += "C";
+           return "C"+ romanConversion(input);
         }
         else if (input-90 >=0) {
             input -= 90;
-            roman += "XC";
+            return "XC"+ romanConversion(input);
         }
         else if (input-50 >=0) {
             input -= 50;
-            roman += "L";
+            return "L"+ romanConversion(input);
         }
         else if (input-40 >=0) {
             input -= 40;
-            roman += "XL";
+            return "XL"+ romanConversion(input);
         }
         else if (input-10 >=0) {
             input -= 10;
-            roman += "X";
+            return "X"+ romanConversion(input);
         }
         else if (input-5 >= 0) {
             input -= 5;
-            roman += "V";
+            return "V"+ romanConversion(input);
         }
         else if (input-1 >= 0) {
             input -= 1;
-            roman += "I";
+            return "I"+ romanConversion(input);
+        } else{
+            return "";
         }
-        return romanConversion(input);
     }
 }
