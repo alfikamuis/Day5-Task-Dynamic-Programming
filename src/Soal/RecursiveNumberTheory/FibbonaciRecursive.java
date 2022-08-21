@@ -14,7 +14,7 @@ public class FibbonaciRecursive {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.print("check fibbonaci index-n number: ");
+        System.out.print("fibbonaci index-n number: ");
         int input = scan.nextInt();
 
         System.out.printf("bilangan fibbonaci ke %d adalah: ",input);
@@ -25,8 +25,6 @@ public class FibbonaciRecursive {
         fiboRecurs(input-1);
         System.out.println("\n"+containerPrime);
 
-        //fibo fungsi kedua 0 tidak dianggap
-        //System.out.println(fiboRecurs2(input));
     }
 
     public static void fiboRecurs(int n) {
@@ -37,17 +35,9 @@ public class FibbonaciRecursive {
             if (n== 1){
                 System.out.print(temp);
             }
+            //cotainer untuk tampilan saja
             containerPrime.add(temp);
             fiboRecurs(n-1);
-        }
-    }
-
-    public static int fiboRecurs2(int n) {
-        if(n == 0 || n== 1) {
-            return n;
-        }
-        else {
-            return fiboRecurs2(n-1)+fiboRecurs2(n-2);
         }
     }
 }
